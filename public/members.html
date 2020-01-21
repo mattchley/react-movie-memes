@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="./stylesheets/materialize.min.css" media="screen,projection" />
+
+    <title>Movie Meme Mash</title>
+    <style>
+        .brand-logo {
+            font-family: 'Crushed', cursive;
+            font-size: xxx-large;
+        }
+
+        h4 {
+            font-family: 'Raleway', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="white">
+    <ul id="dropdown1" class="dropdown-content">
+        <!-- <li><a href="#!">one</a></li>
+        <li><a href="#!">two</a></li>
+        <li class="divider"></li> -->
+        <li><a href="/logout" id="logOut">Log Out</a></li>
+    </ul>
+    <nav class="blue lighten-1">
+        <div class="nav-wrapper container">
+            <a href="./index.html" class="brand-logo center">React Movie Review</a>
+            <a href="#" data-target="nav-mobile" class="top-nav sidenav-trigger full hide-on-large-only">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="left hide-on-med-and-down">
+                <li class="search">
+                    <div class="search-wrapper">
+                        <form id="movie-search">
+                            <input id="movie-input" placeholder="Search">
+                        </form>
+                    </div>
+                </li>
+            </ul>
+            <ul class="right hide-on-med-and-down">
+                <!-- Dropdown Trigger -->
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1" id="member-name"><i
+                            class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul id="nav-mobile" class="sidenav sidenav-fixed" style="transform:translateX(-105%);">
+        <li class="search">
+            <div class="search-wrapper">
+                <input id="find-movie" placeholder="Search">
+            </div>
+        </li>
+        <li class="bold">
+            <a href="#" class="black">Login</a>
+        </li>
+    </ul>
+
+    <div id="movieResults" class="row">
+        <div id="movieCall">
+
+        </div>
+
+        <div class="col s12 m5" style="visibility: hidden;" id="giphy-col">
+            <br>
+            <div class="row">
+
+                <!-- Modal Trigger -->
+                <a class="waves-effect waves-light btn modal-trigger blue lighten-1" href="#modal1">Add Review</a>
+
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal modal-fixed-footer">
+                    <div class="modal-content">
+                        <h4>Enter a comment</h4>
+                        <hr>
+                        <div class="row">
+                            <div class="col s12">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                        <label for="textarea1">Comment</label>
+                                    </div>
+                                    <form id="giphy-search">
+                                        <input id="giphy-input" placeholder="Search">
+                                        <div id="giphy-image" style="float:center"></div>
+                                    </form>
+                                    <!-- Giphy cards -->
+                                    <div class="container" id="gify-cards">
+                                        <div class="row">
+                                            <div class="col s6 m4">
+                                                <div class="card" id="card1">
+                                                    <div class="card-image">
+                                                        <img src="" id="gif1">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <div class="card" id="card2">
+                                                    <div class="card-image">
+                                                        <img src="" id="gif2">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <div class="card" id="card3">
+                                                    <div class="card-image">
+                                                        <img src="" id="gif3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- row 2 of cards -->
+                                        <div class="row">
+                                            <div class="col s6 m4">
+                                                <div class="card" id="card4">
+                                                    <div class="card-image">
+                                                        <img src="" id="gif4">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <div class="card" id="card5">
+                                                    <div class="card-image">
+                                                        <img src="" id="gif5">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <div class="card" id="card6">
+                                                    <div class="card-image">
+                                                        <img src="" id="gif6">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- row 3 of cards -->
+                                        <div class="row">
+                                            <div class="col s6 m4">
+                                                <div class="card" id="card7">
+                                                    <div class="card-image">
+                                                        <img src="" id="gif7">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <div class="card" id="card8">
+                                                    <div class="card-image">
+                                                        <img src="" id="gif8">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col s6 m4">
+                                                <div class="card" id="card9">
+                                                    <div class="card-image">
+                                                        <img src="" id="gif9">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="modal-close waves-effect waves-green btn blue lighten-1"
+                            id="post">Submit</button>
+                    </div>
+                </div>
+                <!-- End of Modal Strutction -->
+            </div>
+
+            <div id="comment-card-area">
+
+            </div>
+            
+        </div>
+    </div>
+    ​
+
+    <!-- <button id="post">POST</button> -->
+    ​
+    <script src="./js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/members.js"></script>
+</body>
+
+</html>

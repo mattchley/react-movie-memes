@@ -1,0 +1,24 @@
+{
+  "development": {
+    "username": "root",
+    "password": "Stockholm!1",
+    "database": "mmm_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "ZXCvbnASD!12345",
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "md02279zmulwmgh4",
+    "password": "v8qlz6j53w3augma",
+    "database": "ln7q41r995exn2r6",
+    "host": "nba02whlntki5w2p.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql"
+  }
+
+}
